@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <!--bloque titulo-->
+    {% block head %}
+        <title>Bienvenidos</title>
+    {% endblock %}
+  </head>
+  <body>  
+   <div class="container-fuid fixed-top bg-dark">
+    <!-- menu navegacion-->
+    <nav class="navbar navbar-expand-lg text-center container py-2">
+      <a class="navbar-brand" href="#">
+        <img src="{% static 'image/gato.jpg' %}" width="50" height="50" class="d-inline-block align-top rounded-circle" alt="">
+      </a>
+      <h2 class="ml-3 text-white">Nombre Empresa</h2>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+          <h4><a class="nav-item nav-link text-white" href="#">Inicio</a></h4>
+          <h4><a class="nav-item nav-link text-white" href="#productos">Productos</a></h4>
+          <h4><a class="nav-item nav-link text-white" href="#nosotros">Nosotros</a></h4>
+          <h4><a class="nav-item nav-link text-white" href="#contacto">Contacto</a></h4>
+        </div>
+      </div>
+    </nav>
+    <!-- Fin menu navegacion -->
+   </div>
+    <!--Block portada-->
+    {% include 'portada.html' %}
+    {% block portada %}{% endblock %}
+    <!-- fin block portada-->
+   
+    <!--Block portada-->
+    {% include 'productos.html' %}
+    {% block productos %}{% endblock %}
+    <!-- fin block portada-->
+
+    <!--Bloque del nosotros-->
+    {% include 'nosotros.html' %}
+    {% block nosotros %}{% endblock %}
+    <!-- fin bloque nosotros-->
+    
+    <!--Bloque del contacto-->
+    {% include 'contacto.html' %}
+    {% block contacto %}{% endblock %}
+    <!-- fin bloque contacto-->
+    <!--pie de pagina-->
+    <div class="container-fluid bg-dark text-center text-white py-1 shadow fixed-bottom">
+       <h6>Todos los derechos reservados</h6>
+    </div>
+    <!--fin pie de pagina-->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+  </body>
+</html>

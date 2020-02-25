@@ -1,0 +1,23 @@
+{% block contacto %}
+<div class="container-fluid bg-primary py-2" id="contacto">
+    <div class="container py-5 " style="width: 40rem">
+        <h1 class="display-3 text-center py-1">Contactenos</h1>
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Nombre</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Ingresar nombre">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresar email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group ">
+                <label for="exampleInputPassword1">Consulta</label>
+                <textarea class="form-control" rows="5" id="comment" placeholder="Ingrese Consulta">Ingrese Consulta</textarea>
+            </div>
+             <button type="submit" class="btn btn-danger">Enviar</button>
+        </form>  
+    </div>    
+</div>
+{% endblock %}
